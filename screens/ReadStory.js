@@ -26,7 +26,7 @@ export default class Readstory extends React.Component {
       SearchFilterFunction=async(text)=>{
         this.state.allStories.map((stories)=>{
           if(stories.title  === this.state.search || stories.author  === this.state.search){
-              var story = db.collection('Stories').where('title'||'author','==',text).get();
+              var story = db.collection('Stories').where('title','==',text).get();
               
              console.log(story);
              
